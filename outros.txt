@@ -12,17 +12,3 @@ openssl req -x509 -nodes -days 825 \
 
 ----------------------------------------------------------------
 
-netdata
-
-/DATA/AppData/Netdata/config/netdata.conf
-
-[global]
-update every = 1
-
-[db]
-mode = dbengine
-dbengine multihost disk space = 512
-dbengine tier 0 retention size = 1h
-dbengine tier 1 retention size = 24h
-dbengine tier 2 retention size = 7d
-dbengine tier 3 retention size = 30d
