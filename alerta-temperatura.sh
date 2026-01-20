@@ -1,5 +1,8 @@
+
+sudo nano /usr/local/bin/cpu_alert.sh
 */5 * * * * /usr/local/bin/temp_alert.sh
 
+#----------------------------------------------------------
 
 #!/bin/bash
 
