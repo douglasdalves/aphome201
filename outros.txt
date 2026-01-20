@@ -1,0 +1,28 @@
+sed -i "s/1 => '192.168.8.53',/1 => '192.168.8.53',\n    2 => 'aphome201',/" /var/www/html/config/config.php
+
+
+nginx
+
+openssl req -x509 -nodes -days 825 \
+  -newkey rsa:2048 \
+  -keyout aphome201.local.key \
+  -out aphome201.local.crt \
+  -subj "/C=BR/ST=Home/L=Home/O=ApHome/CN=aphome201.local" \
+  -addext "subjectAltName=DNS:aphome201.local,DNS:*.aphome201.local"
+
+----------------------------------------------------------------
+
+netdata
+
+/DATA/AppData/Netdata/config/netdata.conf
+
+[global]
+update every = 1
+
+[db]
+mode = dbengine
+dbengine multihost disk space = 512
+dbengine tier 0 retention size = 1h
+dbengine tier 1 retention size = 24h
+dbengine tier 2 retention size = 7d
+dbengine tier 3 retention size = 30d
