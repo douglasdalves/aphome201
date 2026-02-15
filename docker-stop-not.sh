@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # ===== CONFIG TELEGRAM =====
-BOT_TOKEN="8437487347:AAHRS8H0RU-ZldrNjO_iUGPwtx2aJ3M8Yg4"
-CHAT_ID="1242859256"
+BOT_TOKEN=""
+CHAT_ID=""
 
 send_telegram() {
   local MESSAGE="$1"
