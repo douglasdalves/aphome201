@@ -13,3 +13,11 @@ sudo crontab -e
 
 sudo docker ps --format "table {{.Names}}\t{{.Image}}"
 sudo docker ps --format "{{.Names}}" | sort
+
+
+telegram.conf
+TELEGRAM_TOKEN="SEU_TOKEN_AQUI"
+TELEGRAM_CHAT_ID="SEU_CHAT_ID_AQUI"
+# Configurações do bot
+
+sudo chmod 600 telegram.conf

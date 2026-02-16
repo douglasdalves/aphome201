@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# ===== CONFIG TELEGRAM =====
-BOT_TOKEN=""
-CHAT_ID=""
+# Carrega variáveis do Telegram
+source /usr/local/bin/telegram.conf
+
 
 send_telegram() {
   local MESSAGE="$1"
-  curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
-    -d chat_id="${CHAT_ID}" \
+  curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+    -d chat_id="${TELEGRAM_CHAT_ID}" \
     -d text="${MESSAGE}" > /dev/null
 }
 
